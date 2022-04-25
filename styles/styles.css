@@ -65,3 +65,7 @@
 .grupo2 small{
     font-size: 15px;
 }
+
+.carousel .carousel-item{
+    max-height: 400px;
+}
