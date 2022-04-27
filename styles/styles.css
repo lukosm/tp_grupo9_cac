@@ -69,3 +69,21 @@
 .carousel .carousel-item{
     max-height: 400px;
 }
+
+
+h1{
+
+    color: royalblue
+}
+
+.promo{
+    position: absolute;
+    top: 10px;
+    left: 0;
+    font-size: 20px;
+    background: yellow;
+    padding: 15px;
+    color: black;
+    border-bottom-right-radius: 25px;
+    border-top-right-radius: 25px;
+}
