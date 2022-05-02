@@ -81,3 +81,9 @@ h1{
     border-bottom-right-radius: 25px;
     border-top-right-radius: 25px;
 }
+.filtrosDiv{
+    background-color: rgb(245, 244, 243);
+    height:100%;
+    float: left;
+    padding: 20px;
+}
