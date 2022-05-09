@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+/*Footer Init*/
+.piePagina {
+    width: 100%;
+}
+
+.grupo1 {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 50px;
+    padding: 45px 0px;
+}
+
+.box figure {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box figure img {
+    width: 250px;
+}
+
+.box h2 {
+    margin-bottom: 25px;
+    font-size: 20px;
+}
+
+.box p {
+    margin-bottom: 10px;
+}
+
+.redSocial a {
+    display: inline-block;
+    text-decoration: none;
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    color: #000;
+    margin-right: 10px;
+    text-align: center;
+    transition: all 300ms ease;
+}
+
+.redSocial a:hover {
+    color: #00ffff;
+}
+
+.grupo2 {
+    padding: 15px 10px;
+    text-align: center;
+}
+
+.grupo2 small {
+    font-size: 15px;
+}
+
+
+
+.carousel .carousel-item {
+    max-height: 400px;
+}
+
+
+h1 {
+    text-align: center;
+}
+
+.promo {
+    position: absolute;
+    top: 10px;
+    left: 0;
+    font-size: 20px;
+    background: yellow;
+    padding: 15px;
+    color: black;
+    border-bottom-right-radius: 25px;
+    border-top-right-radius: 25px;
+}
+
+.filtrosDiv {
+    background-color: rgb(245, 244, 243);
+    height: 100%;
+    float: left;
+    padding: 20px;
+}
+
+
+.filtros {
+    background-color: rgb(245, 244, 243);
+    padding: 20px;
+}
+
+.articuloPrecio span {
+    font-weight: bold;
+}
+
+.articuloPrecio span:first-child {
+    font-size: larger;
+}
+
+.articuloPrecio span:nth-child(2) {
+    margin-left: 10px;
+    color: green;
+}
+
+.articulo .destacado {
+    color: #ffd400;
+    font-size: 100px;
+    position: absolute;
+    right: 0;
+}
+
+#divContenidoArticulos {
+    padding: 5px;
+}
+
+.articulo .card {
+    padding: 10px;
+}
+
+.articulo  .card:hover{
+    cursor: pointer;
+    -webkit-box-shadow: 0 1px 1px 0 rgb(0 0 0 / 10%);
+    box-shadow: 0 1px 1px 0 rgb(0 0 0 / 10%);
+}
