@@ -6,6 +6,10 @@ const alertSuccess = document.getElementById("alertSuccess");
 const alertEmail = document.getElementById("alertEmail");
 const alertPass = document.getElementById("alertPass");
 
+
+// //Traemos los valores del localstorage
+// const pass=localStorage.getItem("contra");
+// const email=localStorage.getItem("mail")
 // SETEAMOS LOS VALORES DE LOGIN POR DEFECTO
 const pass = 1234;
 const email = "mail@mail.com";

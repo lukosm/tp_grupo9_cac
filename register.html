@@ -85,38 +85,42 @@
                         <div class="col-md-0 mb-2">
 
                           <div class="form-outline">
-                            <input type="text" id="firstName" class="form-control form-control-lg" placeholder="Nombre">
+                            <input type="text" id="nombre1" class="form-control form-control-lg" placeholder="Nombre">
+                            <p class="text-danger mb-2 d-none" id="alertName"></p> 
                           </div>
 
                         </div>
-                        <div class="col-md-0 mb-2">
+                        <div class="col-md-0 mb-lg-2 mb-2">
                             <div class="form-outline">
-                            <input type="text" id="lastName" class="form-control form-control-lg" placeholder="Apellido">
+                            <input type="text" id="apellido" class="form-control form-control-lg" placeholder="Apellido">
+                            <p class="text-danger mb-2 d-none" id="alertLastN"></p> 
                           </div>
                         </div>
                       </div>
-
-                        <div class="input-group input-group-lg mb-2">
+                        <div class="col-md-0 input-group input-group-lg mb-2">
                             <span class="input-group-text" id="inputGroup-sizing-lg">@</span>
-                            <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="inputGroup-sizing-lg">
+                            <input type="text" class="form-control" id="user" placeholder="Username" aria-label="Username" aria-describedby="inputGroup-sizing-lg">
                         </div>
-
+                        <p class="text-danger mb-2 d-none md-0" id="alertUser"></p>
 
                       <div class="row">
-                        <div class="col-md-0 mb-lg-2 mb-2>
-
-                          <div class=" form-outline"="">
+                        <div class="col-md-0 mb-lg-2 mb-8>
+                          <div class="form-outline">
                             <input type="email" id="emailAddress" class="form-control form-control-lg" placeholder="Email">
-                          </div>
+                            </div>
+                            <p class="text-danger mb-2 d-none" id="alertEmail"></p> 
+                            </div>
 
-                        </div>
-                        <div class="input-group input-group-lg mb-2">
-                            <input type="password" id="inputPassword" placeholder="Contraseña" class="form-control mb-2" aria-describedby="passwordHelpInline">
-                           
-                          </div>
-                      </form></div>
-                      <button type="submit" class="btn btn-primary btn-lg">Registrarme</button>
-                    
+                        <div class="col-md-0  input-group-lg mb-2">
+                            <input type="password" id="password" placeholder="Contraseña" class="form-control mb-2" aria-describedby="passwordHelpInline">
+                            <p class="text-danger mb-2 d-none" id="alertPass"></p>
+                           </div>
+                         
+                          <button type="submit" class="btn btn-primary btn-lg" value='Enviar'>Registrarme</button>
+                      </form>
+                      <div class="alert alert-success mt-2 d-none" id="alertSuccess"></div>
+                    </div>
+                    <div id="error"></div>
                   </div>
                 </div>
               </div>
