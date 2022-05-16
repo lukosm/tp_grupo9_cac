@@ -79,19 +79,20 @@
                 <div class="card shadow-2-strong card-registration" style="border-radius: 15px;">
                   <div class="card-body p-4 p-md-5">
                     <h3 class="mb-4 pb-2 pb-md-0 mb-md-4">INGRESAR</h3>
-                      <form>
+                      <form id="form">
                           <div class="form-group mb-lg-4">
-                            <label for="exampleInputEmail1">Email</label>
-                            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email">
-                            <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+                            <label for="email">Email</label>
+                            <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Email">
+                            <p class="text-danger mb-2 d-none" id="alertEmail"></p>                          
                           </div>
                           <div class="form-group mb-lg-2">
-                            <label for="exampleInputPassword1">Contraseña</label>
-                            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Contraseña">
+                            <label for="pass">Contraseña</label>
+                            <input type="password" class="form-control" id="pass" placeholder="Contraseña">
+                            <p class="text-danger mb-2 d-none" id="alertPass"></p>
                           </div>
                           <div class="form-check mb-lg-2">
-                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                            <label class="form-check-label" for="exampleCheck1">Recordar contraseña</label>
+                            <input type="checkbox" class="form-check-input" id="check">
+                            <label class="form-check-label" for="check">Recordar contraseña</label>
                           </div>
                               <div class="text-lg-center">
                                   <span>No tienes cuenta?</span>
@@ -101,7 +102,7 @@
                                                       
                           <button type="submit" class="btn btn-primary btn-lg btn-block">Ingresar</button>
                         </form>
-                          
+                      <div class="alert alert-success mt-2 d-none" id="alertSuccess"></div>
                   </div>
                 </div>
               </div>
@@ -156,5 +157,6 @@
       <small> &copy; 2022 | <b>MoreTech</b> | All rights Reserved.</small>
     </div>
   </footer>
+  <script src="./scripts/login.js"></script>
 </body>
 </html>
