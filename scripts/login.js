@@ -13,8 +13,10 @@ const alertPass = document.getElementById("alertPass");
 // SETEAMOS LOS VALORES DE LOGIN POR DEFECTO
 // const pass = 1234;
 // const email = "mail@mail.com";
+
 var email = localStorage.getItem("email");
-var pass = localStorage.getItem("password");
+var pass = localStorage.getItem("clave");
+
 const pintarMensajeExito = () => {
     alertSuccess.classList.remove("d-none");
     alertSuccess.textContent = "Login Exitoso";
@@ -85,5 +87,5 @@ formulario.addEventListener("submit", (evento) => {
     }
 
     console.log("Formulario enviado con éxito");
-    pintarMensajeExito();
+    alert("Bienvenido!")
 });
