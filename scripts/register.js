@@ -49,7 +49,8 @@ formulario.addEventListener("submit", (evento) => {
             msg: "Nombre Inválido",
         });
     } else {
-
+        nombre.classList.remove("is-invalid");
+        nombre.classList.add("is-valid");
         alertName.classList.add("d-none");
     }
 
@@ -62,7 +63,8 @@ formulario.addEventListener("submit", (evento) => {
             msg: "Apellido Inválido",
         });
     } else {
-
+        lastName.classList.remove("is-invalid");
+        lastName.classList.add("is-valid");
         alertLastN.classList.add("d-none");
     }
  
@@ -114,7 +116,8 @@ formulario.addEventListener("submit", (evento) => {
             msg: "Contraseña Inválida",
         });
     } else {
-
+        pass.classList.remove("is-invalid");
+        pass.classList.add("is-valid");
         alertPass.classList.add("d-none");
     }
 
