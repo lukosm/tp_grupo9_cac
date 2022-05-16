@@ -13,6 +13,10 @@ const alertUser = document.getElementById("alertUser");
 const alertLastN = document.getElementById("alertLastN");
 const alertPass = document.getElementById("alertPass");
 
+// localStorage.setItem("email", userEmail).value;
+// localStorage.setItem("password", pass.value);
+localStorage.password = document.getElementById("password").value;
+
 const pintarMensajeExito = () => {
     alertSuccess.classList.remove("d-none");
     alertSuccess.textContent = "Login Exitoso";
@@ -88,6 +92,7 @@ formulario.addEventListener("submit", (evento) => {
             });
         }
         else{
+            localStorage.setItem("email", userEmail.value);
             userEmail.classList.remove("is-invalid");
             userEmail.classList.add("is-valid");
             alertEmail.classList.add("d-none");
@@ -116,6 +121,7 @@ formulario.addEventListener("submit", (evento) => {
             msg: "Contraseña Inválida",
         });
     } else {
+        localStorage.setItem("clave", pass.value);
         pass.classList.remove("is-invalid");
         pass.classList.add("is-valid");
         alertPass.classList.add("d-none");

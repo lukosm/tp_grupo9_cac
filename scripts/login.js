@@ -11,9 +11,10 @@ const alertPass = document.getElementById("alertPass");
 // const pass=localStorage.getItem("contra");
 // const email=localStorage.getItem("mail")
 // SETEAMOS LOS VALORES DE LOGIN POR DEFECTO
-const pass = 1234;
-const email = "mail@mail.com";
-
+// const pass = 1234;
+// const email = "mail@mail.com";
+var email = localStorage.getItem("email");
+var pass = localStorage.getItem("password");
 const pintarMensajeExito = () => {
     alertSuccess.classList.remove("d-none");
     alertSuccess.textContent = "Login Exitoso";
