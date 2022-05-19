@@ -275,102 +275,118 @@
         </div>
         <div class="container-fluid">
             <!-- no logro que la division de filtros ocupe el 100% del conetendor-->
-            <div class="filtros">
-                <h3><b>Busqueda Avanzada</b></h3>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="filtros">
+                        <h3><b>Busqueda Avanzada</b></h3>
 
-                <div class="row">
-                    <div class="col-md-6">
+                        <div class="row">
+                            <div class="col-md-6">
 
-                        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"
-                            id="txtBusqueda">
-                    </div>
-                    <div class="col-md-3">
+                                <input class="form-control mr-sm-2" type="search" placeholder="Search"
+                                    aria-label="Search" id="txtBusqueda">
+                            </div>
+                            <div class="col-md-3">
 
-                        <button class="btn btn-outline-success my-2 my-sm-0" type="button"
-                            onclick="filtroPorNombre()">Busqueda </button>
+                                <button class="btn btn-outline-success my-2 my-sm-0" type="button"
+                                    onclick="filtroPorNombre()">Busqueda </button>
+                            </div>
+                        </div>
+                        <br><br>
+                        <h3>Buscar por categoria</h3>
+                        <div class="row">
+                            <div class="col-md-3">
+                                <select id="cbCategoria" class="form-select" aria-label="Default select example"
+                                    onchange="cambioSubCategoria(this)">
+                                </select>
+                            </div>
+                            <div class="col-md-3">
+                                <select id="cbSubCategoria" class="form-select" aria-label="Default select example">
+                                </select>
+                            </div>
+                            <div class="col-md-3">
+
+                                <button class="btn btn-outline-success my-2 my-sm-0" type="button"
+                                    onclick="filtroPorCategoria()">Busqueda </button>
+                            </div>
+                        </div>
+
+
+
+
+
+
+
                     </div>
                 </div>
-                <br><br>
-                <h3>Buscar por categoria</h3>
-                <div class="row">
-                    <div class="col-md-3">
-                        <select id="cbCategoria" class="form-select" aria-label="Default select example"
-                            onchange="cambioSubCategoria(this)">
-                        </select>
-                    </div>
-                    <div class="col-md-3">
-                        <select id="cbSubCategoria" class="form-select" aria-label="Default select example">
-                        </select>
-                    </div>
-                    <div class="col-md-3">
+                <div class="col-md-9">
+                    <div id="divContenidoArticulos" class="row">
 
-                        <button class="btn btn-outline-success my-2 my-sm-0" type="button"
-                            onclick="filtroPorCategoria()">Busqueda </button>
                     </div>
                 </div>
+                <div class="col-md-3">
+                    <div class="list-group" id="carrito">
 
-
-
-
-
-
-
-            </div>
-            <div id="divContenidoArticulos" class="row">
-
-            </div>
-        </div>
-
-
-
-
-        <!-- Footer by Daniel Bravo -->
-        <hr>
-        <footer class="piePagina">
-            <div class="grupo1">
-                <!-- Logo de la Empresa -->
-                <div class="box">
-                    <figure>
-                        <a href="#">
-                            <img src="/img/logoMoretech.PNG" alt="E-Market Logo">
+                    
+                    </div>
+                    <div class="list-group">
+                        <a href="#" class="list-group-item list-group-item-action active" id="total">
+                            
                         </a>
-                    </figure>
+                    </div>
                 </div>
-                <!-- Descripcion -->
-                <div class="box">
-                    <h2>Sobre Nosotros</h2>
-                    <p>MoreTech es una empresa multinacional de tecnología dedicada al mundo de los
-                        electrodomésticos.</p>
-                    <p>Actualmente en crecimiento y con un equipo de profesionales que garantiza la calidad de
-                        nuestros productos.
-                    </p>
-                </div>
-                <div class="box">
-                    <!-- Contacto -->
-                    <div class="contacto">
-                        <h2>Contacto</h2>
-                        <p>
-                            Telefono: +54 (011) 4523 8400 <br>
-                            Email: info@moretech.com.ar <br>
-                            Dirección: Av. Santa Fe 3181, C1425 CABA. <br>
+            </div>
+
+
+
+
+            <!-- Footer by Daniel Bravo -->
+            <hr>
+            <footer class="piePagina">
+                <div class="grupo1">
+                    <!-- Logo de la Empresa -->
+                    <div class="box">
+                        <figure>
+                            <a href="#">
+                                <img src="/img/logoMoretech.PNG" alt="E-Market Logo">
+                            </a>
+                        </figure>
+                    </div>
+                    <!-- Descripcion -->
+                    <div class="box">
+                        <h2>Sobre Nosotros</h2>
+                        <p>MoreTech es una empresa multinacional de tecnología dedicada al mundo de los
+                            electrodomésticos.</p>
+                        <p>Actualmente en crecimiento y con un equipo de profesionales que garantiza la calidad de
+                            nuestros productos.
                         </p>
                     </div>
-                    <!-- Redes Sociales -->
-                    <h2>Siguenos</h2>
-                    <div class="redSocial">
-                        <a href="#" class="fa fa-whatsapp"></a>
-                        <a href="#" class="fa fa-instagram"></a>
-                        <a href="#" class="fa fa-facebook"></a>
-                        <a href="#" class="fa fa-twitter"></a>
-                        <a href="#" class="fa fa-youtube"></a>
+                    <div class="box">
+                        <!-- Contacto -->
+                        <div class="contacto">
+                            <h2>Contacto</h2>
+                            <p>
+                                Telefono: +54 (011) 4523 8400 <br>
+                                Email: info@moretech.com.ar <br>
+                                Dirección: Av. Santa Fe 3181, C1425 CABA. <br>
+                            </p>
+                        </div>
+                        <!-- Redes Sociales -->
+                        <h2>Siguenos</h2>
+                        <div class="redSocial">
+                            <a href="#" class="fa fa-whatsapp"></a>
+                            <a href="#" class="fa fa-instagram"></a>
+                            <a href="#" class="fa fa-facebook"></a>
+                            <a href="#" class="fa fa-twitter"></a>
+                            <a href="#" class="fa fa-youtube"></a>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <!-- Copyright -->
-            <div class="grupo2">
-                <small> &copy; 2022 | <b>MoreTech</b> | All rights Reserved.</small>
-            </div>
-        </footer>
+                <!-- Copyright -->
+                <div class="grupo2">
+                    <small> &copy; 2022 | <b>MoreTech</b> | All rights Reserved.</small>
+                </div>
+            </footer>
 </body>
 
 </html>

@@ -21,7 +21,7 @@ datosProductos = [
     {
         id: 1,
         nombre: "Smart TV Noblex DK32X5000 LED HD 32",
-        precio: "$34.499",
+        precio: "34.499",
         imagen: "https://http2.mlstatic.com/D_NQ_NP_974663-MLA47846000904_102021-O.webp",
         categoria: '1',
         subCategoria: '1',
@@ -32,9 +32,9 @@ datosProductos = [
 
     },
     {
-        id: 1,
+        id: 2,
         nombre: "Smart TV Samsung Series 7 UN55AU7000GCZB LED 4K 55",
-        precio: "$108.350",
+        precio: "108.350",
         imagen: "https://http2.mlstatic.com/D_NQ_NP_739692-MLA48913871021_012022-O.webp",
         categoria: '1',
         subCategoria: '1',
@@ -45,9 +45,9 @@ datosProductos = [
 
     },
     {
-        id: 1,
+        id: 3,
         nombre: "Home Theater JBL Cinema SB130 negro 100V/240V",
-        precio: "$38999",
+        precio: "38.999",
         imagen: "https://http2.mlstatic.com/D_NQ_NP_748627-MLA46104178298_052021-O.webp",
         categoria: '1',
         subCategoria: '2',
@@ -58,9 +58,9 @@ datosProductos = [
 
     },
     {
-        id: 1,
+        id: 4,
         nombre: "Heladera inverter Patrick HPK151M11 silver con freezer 388L 220V",
-        precio: "$98.999",
+        precio: "98.999",
         imagen: "https://http2.mlstatic.com/D_NQ_NP_952184-MLA43407133867_092020-O.webp",
         categoria: '2',
         subCategoria: '4',
@@ -127,7 +127,9 @@ function cargaInicial() {
             opt.innerHTML = subCategoria[i].nombre;
             select.appendChild(opt);
         }
-    armoListaArticulos(datosProductos)
+    armoListaArticulos(datosProductos);
+    var new_data = [];
+    localStorage.setItem('carrito', JSON.stringify(new_data));
 }
 
 function creoOpcionTodos() {
@@ -168,8 +170,8 @@ function filtroPorNombre() {
     var txtBusqueda = document.getElementById("txtBusqueda");
     var filtro = [];
     for (var k in datosProductos) {
-        if (txtBusqueda.value == '' || datosProductos[k].nombre.toLowerCase().indexOf(txtBusqueda.value.toLowerCase())!=-1)
-                filtro.push(datosProductos[k])
+        if (txtBusqueda.value == '' || datosProductos[k].nombre.toLowerCase().indexOf(txtBusqueda.value.toLowerCase()) != -1)
+            filtro.push(datosProductos[k])
     }
     console.log(filtro);
     armoListaArticulos(filtro)
@@ -185,8 +187,8 @@ function armoListaArticulos(data) {
             var articulo =
                 '<div data-aos="fade-up" data-aos-delay="' +
                 i +
-                '50" class="articulo col-md-3 col-sm-6" onclick="abroDetalle(' +
-                k +
+                '50" class="articulo col-md-3 col-sm-6" onclick="agregoCarrito(' +
+                data[k].id +
                 ');"><div class="card">';
 
             if (data[k].destacado !== undefined && data[k].destacado == true)
@@ -201,7 +203,7 @@ function armoListaArticulos(data) {
                 "</div>" +
                 '<div class="articuloContenido">' +
                 '<div class="articuloPrecio">' +
-                "<span>" +
+                "<span>$" +
                 data[k].precio +
                 "</span>";
 
@@ -236,7 +238,7 @@ function cargoDetalle(k) {
         "</div> </div> " +
         '<div class="divContenedorNosotros" class="articuloContenido">' +
         '<div class="articuloPrecio">' +
-        "<span>" +
+        "<span>$" +
         data[k].precio +
         "</span>" +
         "</div>" +
@@ -263,10 +265,35 @@ function cargoProfesores(k) {
     });
 }
 
-function abroDetalle(detalle) {
-    console.log(location.href);
-    // location.href='../pg/detalle.html?idDetalle=' + detalle;
-    window.open("pg/detalle.html?idDetalle=" + detalle, "_self");
+function agregoCarrito(detalle) {
+
+
+    let new_data = [];
+    let old_data = JSON.parse(localStorage.getItem('carrito'));
+
+    datosProductos.forEach((item) => {
+        if (item.id === detalle) {
+            console.log(old_data);
+            old_data.push(item)
+        }
+    });
+
+    localStorage.setItem('carrito', JSON.stringify(old_data));
+    armoCarrito(old_data)
+
+}
+
+function armoCarrito(items) {
+    document.getElementById("carrito").innerHTML = "";
+    var suma = 0;
+    items.forEach((item) => {
+        document.getElementById("carrito").innerHTML +=
+            '<a href="#" class="list-group-item list-group-item-action">' + item.nombre + ' <span class="badge badge-primary badge-pill">$' + item.precio + '</span></a>';
+
+        suma = suma + parseFloat(item.precio);
+    });
+
+    document.getElementById("total").innerHTML = "$" + suma;
 }
 
 function seleccionoProfe(obj) {

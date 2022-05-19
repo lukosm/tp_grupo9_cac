@@ -137,3 +137,8 @@ h1 {
     -webkit-box-shadow: 0 1px 1px 0 rgb(0 0 0 / 10%);
     box-shadow: 0 1px 1px 0 rgb(0 0 0 / 10%);
 }
+
+.badge.badge-primary.badge-pill{
+    float: right;
+    background-color: rgb(68, 68, 231);
+}
