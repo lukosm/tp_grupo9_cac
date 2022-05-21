@@ -16,6 +16,7 @@ const alertPass = document.getElementById("alertPass");
 
 var email = localStorage.getItem("email");
 var pass = localStorage.getItem("clave");
+var nombre = localStorage.getItem("nombre");
 
 const pintarMensajeExito = () => {
     alertSuccess.classList.remove("d-none");
@@ -87,7 +88,7 @@ formulario.addEventListener("submit", (evento) => {
     }
     console.log("Formulario enviado con éxito");
     swal({
-        title: "Bienvenido",
+        title: "Bienvenido " + nombre,
         icon: "success",
         button: "Aww yiss!",
     });

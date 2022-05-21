@@ -53,6 +53,7 @@ formulario.addEventListener("submit", (evento) => {
             msg: "Nombre Inválido",
         });
     } else {
+        localStorage.setItem("nombre", nombre.value);
         nombre.classList.remove("is-invalid");
         nombre.classList.add("is-valid");
         alertName.classList.add("d-none");
