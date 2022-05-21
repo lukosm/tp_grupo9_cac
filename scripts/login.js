@@ -90,7 +90,6 @@ formulario.addEventListener("submit", (evento) => {
     swal({
         title: "Bienvenido " + nombre,
         icon: "success",
-        button: "Aww yiss!",
     });
 setTimeout( function() { window.location.href = "./index.html"; }, 1000 );
     //window.location.href = "./index.html"
