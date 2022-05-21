@@ -85,7 +85,15 @@ formulario.addEventListener("submit", (evento) => {
         pintarMensajeError(errores);
         return;
     }
-
     console.log("Formulario enviado con éxito");
-    alert("Bienvenido!")
+    swal({
+        title: "Bienvenido",
+        icon: "success",
+        button: "Aww yiss!",
+    });
+setTimeout( function() { window.location.href = "./index.html"; }, 1000 );
+    //window.location.href = "./index.html"
+    //alert("Bienvenido!")
+    
+    
 });
