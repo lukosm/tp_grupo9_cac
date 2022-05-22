@@ -1,4 +1,4 @@
-console.log('hello!')
+//console.log('hello!')
 
 function cargoProductos() {
 
@@ -21,7 +21,7 @@ datosProductos = [
     {
         id: 1,
         nombre: "Smart TV Noblex DK32X5000 LED HD 32",
-        precio: "34.499",
+        precio: "34499.00",
         imagen: "https://http2.mlstatic.com/D_NQ_NP_974663-MLA47846000904_102021-O.webp",
         categoria: '1',
         subCategoria: '1',
@@ -34,7 +34,7 @@ datosProductos = [
     {
         id: 2,
         nombre: "Smart TV Samsung Series 7 UN55AU7000GCZB LED 4K 55",
-        precio: "108.350",
+        precio: "108350.00",
         imagen: "https://http2.mlstatic.com/D_NQ_NP_739692-MLA48913871021_012022-O.webp",
         categoria: '1',
         subCategoria: '1',
@@ -47,7 +47,7 @@ datosProductos = [
     {
         id: 3,
         nombre: "Home Theater JBL Cinema SB130 negro 100V/240V",
-        precio: "38.999",
+        precio: "38999.00",
         imagen: "https://http2.mlstatic.com/D_NQ_NP_748627-MLA46104178298_052021-O.webp",
         categoria: '1',
         subCategoria: '2',
@@ -60,7 +60,7 @@ datosProductos = [
     {
         id: 4,
         nombre: "Heladera inverter Patrick HPK151M11 silver con freezer 388L 220V",
-        precio: "98.999",
+        precio: "98999.99",
         imagen: "https://http2.mlstatic.com/D_NQ_NP_952184-MLA43407133867_092020-O.webp",
         categoria: '2',
         subCategoria: '4',
@@ -72,6 +72,7 @@ datosProductos = [
     },
 
 ];
+
 
 categoria = [
     {
@@ -162,7 +163,7 @@ function filtroPorCategoria() {
             if (cbSubCategoria.value == '0' || cbSubCategoria.value == datosProductos[k].subCategoria)
                 filtro.push(datosProductos[k])
     }
-    console.log(filtro);
+    //console.log(filtro);
     armoListaArticulos(filtro)
 }
 
@@ -173,7 +174,7 @@ function filtroPorNombre() {
         if (txtBusqueda.value == '' || datosProductos[k].nombre.toLowerCase().indexOf(txtBusqueda.value.toLowerCase()) != -1)
             filtro.push(datosProductos[k])
     }
-    console.log(filtro);
+    //console.log(filtro);
     armoListaArticulos(filtro)
 }
 
@@ -187,7 +188,7 @@ function armoListaArticulos(data) {
             var articulo =
                 '<div data-aos="fade-up" data-aos-delay="' +
                 i +
-                '50" class="articulo col-md-3 col-sm-6" onclick="agregoCarrito(' +
+                '50" class="articulo col-md-4 col-sm-6" onclick="agregoCarrito(' +
                 data[k].id +
                 ');"><div class="card">';
 
@@ -273,7 +274,7 @@ function agregoCarrito(detalle) {
 
     datosProductos.forEach((item) => {
         if (item.id === detalle) {
-            console.log(old_data);
+            //console.log(old_data);
             old_data.push(item)
         }
     });
@@ -283,21 +284,44 @@ function agregoCarrito(detalle) {
 
 }
 
+function eliminarProducto(index) {
+
+
+    let new_data = [];
+    let old_data = JSON.parse(localStorage.getItem('carrito'));
+
+    old_data.forEach((item, i) => {
+        if (i.toString() != index) {
+            //console.log(old_data);
+            new_data.push(item)
+        }
+    });
+
+    localStorage.setItem('carrito', JSON.stringify(new_data));
+    armoCarrito(new_data)
+
+}
+
 function armoCarrito(items) {
     document.getElementById("carrito").innerHTML = "";
     var suma = 0;
-    items.forEach((item) => {
+    var cont = 0;
+    items.forEach((item, i) => {
         document.getElementById("carrito").innerHTML +=
-            '<a href="#" class="list-group-item list-group-item-action">' + item.nombre + ' <span class="badge badge-primary badge-pill">$' + item.precio + '</span></a>';
+            '<a href="#" class="list-group-item list-group-item-action">' + item.nombre
+            + '<i class="fa fa-trash" aria-hidden="true" onclick="eliminarProducto(' + i + ')"></i>'
+            + ' <span class="badge badge-primary badge-pill">$' + item.precio + '</span></a>';
 
         suma = suma + parseFloat(item.precio);
+        cont += 1;
     });
 
-    document.getElementById("total").innerHTML = "$" + suma;
+    document.getElementById("contador").innerHTML = cont;
+    document.getElementById("total").innerHTML = "TOTAL $" + suma.toFixed(2);
 }
 
 function seleccionoProfe(obj) {
-    console.log(obj);
+    //console.log(obj);
     obj.classList.add("activo");
 }
 

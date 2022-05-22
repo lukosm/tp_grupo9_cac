@@ -138,7 +138,24 @@ h1 {
     box-shadow: 0 1px 1px 0 rgb(0 0 0 / 10%);
 }
 
-.badge.badge-primary.badge-pill{
+#carrito .badge.badge-primary.badge-pill{
     float: right;
     background-color: rgb(68, 68, 231);
+}
+
+#carrito .fa-trash{
+    float: right;
+}
+
+#carrito{
+    max-height: 250px;
+    overflow-y: auto;
+}
+
+.dropdown-menu.carrito{
+    min-width: 20rem;
+}
+
+.dropstart.ml-1{
+margin-left: 5px;
 }

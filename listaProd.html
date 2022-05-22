@@ -87,6 +87,31 @@
                                     Buscar </a></button>
 
                         </form>
+                        <div class="btn-group dropstart ml-1">
+                            <button type="button" class="btn btn-info dropdown-toggle" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                                <span id="contador"
+                                    class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                                    0
+                                    <span class="visually-hidden">Productos</span>
+                                </span>
+                            </button>
+                            <ul class="dropdown-menu carrito">
+                                <div class="list-group" id="carrito">
+
+
+                                </div>
+                                <div class="list-group">
+                                    <a href="#" class="list-group-item list-group-item-action active" id="total">
+
+                                    </a>
+                                    <button type="button" class="btn btn-success ">
+                                        Comprar
+                                    </button>
+                                </div>
+                            </ul>
+                        </div>
                         <ul class="navbar-nav mb-lg-0">
                             <a class="nav-link" href="/login.html"><svg xmlns="http://www.w3.org/2000/svg" width="16"
                                     height="16" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
@@ -273,6 +298,8 @@
                 </div>
             </div>
         </div>
+        <!-- Example single danger button -->
+
         <div class="container-fluid">
             <!-- no logro que la division de filtros ocupe el 100% del conetendor-->
             <div class="row">
@@ -318,75 +345,67 @@
 
 
                     </div>
-                </div>
-                <div class="col-md-9">
-                    <div id="divContenidoArticulos" class="row">
 
-                    </div>
                 </div>
-                <div class="col-md-3">
-                    <div class="list-group" id="carrito">
+            </div>
+            <div class="col-md-12">
+                <div id="divContenidoArticulos" class="row">
 
-                    
-                    </div>
-                    <div class="list-group">
-                        <a href="#" class="list-group-item list-group-item-action active" id="total">
-                            
-                        </a>
-                    </div>
                 </div>
             </div>
 
+        </div>
 
 
 
-            <!-- Footer by Daniel Bravo -->
-            <hr>
-            <footer class="piePagina">
-                <div class="grupo1">
-                    <!-- Logo de la Empresa -->
-                    <div class="box">
-                        <figure>
-                            <a href="#">
-                                <img src="/img/logoMoretech.PNG" alt="E-Market Logo">
-                            </a>
-                        </figure>
-                    </div>
-                    <!-- Descripcion -->
-                    <div class="box">
-                        <h2>Sobre Nosotros</h2>
-                        <p>MoreTech es una empresa multinacional de tecnología dedicada al mundo de los
-                            electrodomésticos.</p>
-                        <p>Actualmente en crecimiento y con un equipo de profesionales que garantiza la calidad de
-                            nuestros productos.
+
+        <!-- Footer by Daniel Bravo -->
+        <hr>
+        <footer class="piePagina">
+            <div class="grupo1">
+                <!-- Logo de la Empresa -->
+                <div class="box">
+                    <figure>
+                        <a href="#">
+                            <img src="/img/logoMoretech.PNG" alt="E-Market Logo">
+                        </a>
+                    </figure>
+                </div>
+                <!-- Descripcion -->
+                <div class="box">
+                    <h2>Sobre Nosotros</h2>
+                    <p>MoreTech es una empresa multinacional de tecnología dedicada al mundo de los
+                        electrodomésticos.</p>
+                    <p>Actualmente en crecimiento y con un equipo de profesionales que garantiza la calidad de
+                        nuestros productos.
+                    </p>
+                </div>
+                <div class="box">
+                    <!-- Contacto -->
+                    <div class="contacto">
+                        <h2>Contacto</h2>
+                        <p>
+                            Telefono: +54 (011) 4523 8400 <br>
+                            Email: info@moretech.com.ar <br>
+                            Dirección: Av. Santa Fe 3181, C1425 CABA. <br>
                         </p>
                     </div>
-                    <div class="box">
-                        <!-- Contacto -->
-                        <div class="contacto">
-                            <h2>Contacto</h2>
-                            <p>
-                                Telefono: +54 (011) 4523 8400 <br>
-                                Email: info@moretech.com.ar <br>
-                                Dirección: Av. Santa Fe 3181, C1425 CABA. <br>
-                            </p>
-                        </div>
-                        <!-- Redes Sociales -->
-                        <h2>Siguenos</h2>
-                        <div class="redSocial">
-                            <a href="#" class="fa fa-whatsapp"></a>
-                            <a href="#" class="fa fa-instagram"></a>
-                            <a href="#" class="fa fa-facebook"></a>
-                            <a href="#" class="fa fa-twitter"></a>
-                            <a href="#" class="fa fa-youtube"></a>
-                        </div>
+                    <!-- Redes Sociales -->
+                    <h2>Siguenos</h2>
+                    <div class="redSocial">
+                        <a href="#" class="fa fa-whatsapp"></a>
+                        <a href="#" class="fa fa-instagram"></a>
+                        <a href="#" class="fa fa-facebook"></a>
+                        <a href="#" class="fa fa-twitter"></a>
+                        <a href="#" class="fa fa-youtube"></a>
                     </div>
                 </div>
-                <!-- Copyright -->
-                <div class="grupo2">
-                    <small> &copy; 2022 | <b>MoreTech</b> | All rights Reserved.</small>
-                </div>
-            </footer>
+            </div>
+            <!-- Copyright -->
+            <div class="grupo2">
+                <small> &copy; 2022 | <b>MoreTech</b> | All rights Reserved.</small>
+            </div>
+        </footer>
 </body>
 
 </html>
