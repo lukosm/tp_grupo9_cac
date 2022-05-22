@@ -320,9 +320,12 @@ function armoCarrito(items) {
     document.getElementById("total").innerHTML = "TOTAL $" + suma.toFixed(2);
 }
 
-function seleccionoProfe(obj) {
-    //console.log(obj);
-    obj.classList.add("activo");
+function comprar() {
+    
+    var new_data = [];
+    localStorage.setItem('carrito', JSON.stringify(new_data));
+    armoCarrito(new_data)
+    alert('Compra realizada')
 }
 
 function enviarInfo() {
